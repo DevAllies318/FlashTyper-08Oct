@@ -478,16 +478,13 @@ app.post("/api", async (req, res) => {
 app.post("/saveInfo", async (req, res) => {
   try {
     const user = await userModel.findOne({
-      userName: req.body.oldUserName,
+      userName: req.body.userName,
     })
 
     if (user) {
       // Update other fields
       user.name = req.body.name
-      user.userName = req.body.username
       user.userEmail = req.body.email
-      user.userGender = req.body.gender
-
       // Check if the password has been changed
       if (req.body.password !== user.password) {
         // Hash the new password
