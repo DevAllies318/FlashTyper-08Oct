@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+::-ms-reveal {
+  filter: invert(50%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --flashLogo: #ffffff;
+  --mainBackground: #0e0e0e;
+  --wordsTxt: #db9730;
+  --buttonTxt: #555555;
+  --buttonHover: #c6c6c6;
+  --profileCard: white;
+}
+.main-wrapper {
+  max-width: 110rem;
+  margin: auto;
+}
+body {
+  background-color: var(--mainBackground);
+}
+span {
+  color: var(--flashLogo);
+  transition: all ease 0.3s;
+}
+a {
+  text-decoration: none;
+}
+.logoBox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.logo {
+  color: var(--flashLogo);
+  cursor: pointer;
+}
+.logoImg {
+  width: 40px;
+  height: 40px;
+  filter: invert(50%);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+}
+#settings,
+#reset {
+  width: 25px;
+  object-fit: contain;
+  filter: invert(50%);
+}
+.navElements {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.navElements a,
+.timeSelectTitle {
+  color: var(--buttonTxt);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.5s;
+}
+.navElements a:hover {
+  color: var(--buttonHover);
+}
+
+h3 {
+  cursor: default;
+  color: var(--flashLogo);
+}
+
+.wrapper {
+  display: flex;
+}
+
+.main {
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+}
+li {
+  list-style: none;
+}
+.sidebar-nav {
+  border-right: solid var(--buttonTxt);
+  padding: 1rem;
+  flex: 1 1 auto;
+}
+a.sidebar-link {
+  padding: 0.625rem 1.625rem;
+  display: block;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+}
+
+a.sidebar-link.active {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-left: 3px solid #3b7ddd;
+}
+
+.items {
+  width: 20px;
+  height: 20px;
+  filter: invert(50%);
+  margin: 5px;
+}
+.sidebar-link span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.main {
+  padding-left: 3rem;
+}
+.card {
+  background-color: transparent;
+  color: var(--flashLogo);
+  border: none;
+  width: 95%;
+}
+.card-body input {
+  color: var(--buttonTxt);
+}
+.editInput {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  /* here */
+  width: 100%;
+}
+.editInput::placeholder {
+  color: white;
+}
+
+.editIcon {
+  filter: invert(50%);
+  display: flex;
+}
+.line {
+  display: flex;
+  align-items: center;
+}
+#account,
+#appearance {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: inherit;
+}
+.list-group li {
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  background-color: transparent;
+}
+.form-select {
+  background-color: transparent;
+  color: var(--buttonHover);
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--buttonTxt);
+}
+.form-select:focus,
+.form-check-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+option {
+  font-weight: bold;
+  appearance: none;
+  background-color: var(--mainBackground);
+  color: var(--buttonTxt);
+}
+option:hover {
+  background-color: var(--mainBackground);
+  color: red;
+  font-weight: bold;
+  font-size: 10rem;
+}
+.form-check-input {
+  background-color: var(--buttonTxt);
+  border-color: var(--buttonTxt);
+  width: 2.5rem;
+  height: 1.5rem;
+}
+
+.form-check-input:checked {
+  background-color: var(--wordsTxt);
+  border-color: var(--buttonTxt);
+}
+.form-check-input::before {
+  background-color: rgb(255, 0, 0) !important;
+}
+#password {
+  width: 69px;
+}
+.preferences {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3%;
+  width: inherit;
+  justify-content: space-between;
+}
+
+.myBtn {
+  background-color: transparent;
+  color: var(--buttonTxt);
+  border: none;
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--buttonTxt);
+  margin: 0 1rem;
+}
+.myBtn:hover {
+  color: var(--buttonHover);
+}
+/* Style for Delete Account Button */
+
+/* Modal Styles */
+.modal {
+  /* display: no  ne; Hidden by default */
+  display: block;
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: var(--mainBackground);
+}
+
+/* Modal Content Box */
+.modal-content {
+  border: 1px solid var(--buttonTxt);
+  background-color: var(--mainBackground);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 40%;
+  position: relative;
+}
+
+/* Close Button */
+.close {
+  color: var(--buttonTxt);
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--buttonHover);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form Styles */
+#confirmDeletionForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#delPass {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--flashLogo);
+  padding: 10px;
+  color: var(--buttonTxt);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#confirm-btn {
+  margin-top: 20px;
+  background-color: var(--mainBackground);
+  color: var(--buttonTxt);
+  border: none;
+  border-bottom: 2px solid var(--buttonTxt);
+  cursor: pointer;
+  width: fit-content;
+  align-self: center;
+}
+
+#confirm-btn:hover {
+  border-bottom: 2px solid var(--buttonHover);
+  color: var(--buttonHover);
+}
+h1 {
+  color: var(--flashLogo);
+}
