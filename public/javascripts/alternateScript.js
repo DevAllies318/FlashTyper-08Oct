@@ -298,7 +298,7 @@ function main() {
         audio1.currentTime = 0
         audio1.play()
       }
-      if (!started && event.key != " " && Event.key != "Backspace") {
+      if (!started && event.key != " " && event.key != "Backspace") {
         if (preferences.keyHitSound) {
           audio1.currentTime = 0
           audio1.play()
