@@ -294,6 +294,10 @@ function main() {
     // Specific
     // timercnt functionality
     if (Allowed.includes(event.key)) {
+      if (started && preferences.keyHitSound) {
+        audio1.currentTime = 0
+        audio1.play()
+      }
       if (!started && event.key != " " && Event.key != "Backspace") {
         if (preferences.keyHitSound) {
           audio1.currentTime = 0
